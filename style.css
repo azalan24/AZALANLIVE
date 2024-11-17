@@ -130,7 +130,7 @@ header.scrolled {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
-    background-image: url('ad.jpg');
+    background-image: url('2d.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -147,7 +147,7 @@ header.scrolled {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #1c372065; /* Dark overlay with transparency */
     z-index: 1; /* Place above the background image */
 }
