@@ -1,0 +1,173 @@
+
+        /* General Reset and Body Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6f7e5, #c8f7c5);
+            background-size: cover;
+            padding: 40px 20px;
+        }
+
+        /* Page Heading */
+        .page-heading {
+            text-align: center;
+            font-size: 2rem;
+            color: #2a5a2d;
+            margin-bottom: 40px;
+        }
+
+        /* Contact Section Layout */
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .contact-form,
+        .contact-info {
+            flex: 1;
+            max-width: 450px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            background-color: #1C3720;
+            color: white;
+        }
+
+        .contact-info {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Contact Form Styling */
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        /* Flexbox to align first and last name side by side */
+        .contact-form .name-fields {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .contact-form .name-fields input {
+            flex: 1;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .social-links {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            font-size: 20px;
+            color: #007BFF;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #0056b3;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-form, .contact-info {
+                width: 90%;
+            }
+
+            .contact-form .name-fields {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .submit-btn {
+                padding: 10px 0;
+                font-size: 16px;
+            }
+        }
+
+        /* Opening Hours Section */
+        .hours-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .hours {
+            width: 100%;
+            max-width: 600px;
+            background-color: #FFA500; /* Orange background */
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hours h3 {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+        }
+
+        .hours p {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+  

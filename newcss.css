@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+   
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+   
+    transition: background-color 0.3s;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column; /* Stack logo and subtitle vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 8px 30px;
+}
+
+.logo-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+    text-decoration: none; /* Remove underline */
+}
+
+.subtitle {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Change color to match your theme */
+    font-size: 0.9rem; /* Adjust font size as needed */
+    margin-top: -2px; /* Add space between logo and subtitle */
+    transition: color 0.3s; /* Optional hover effect */
+}
+#menu-icon {
+    font-size: 2.5rem;
+    padding-left: 20px;
+    cursor: pointer;
+    color: white;
+    transition: margin-left 0.3s;
+    display: none;
+}
+
+#menu-icon.active {
+    margin-left: auto;
+}
+
+header nav {
+    display: flex; /* Flex container for nav */
+    align-items: center; /* Center items vertically */
+    margin-right: 40px; /* Adjust spacing */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Arranges the list items in a row */
+    padding: 0;
+    margin: 0;
+}
+header nav li {
+    position: relative; /* Enable absolute positioning for the pseudo-element */
+    margin: 0 15px;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 5px;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+header nav li a:hover {
+    color: rgba(239, 196, 116, 0.879); /* Change color on hover */
+}
+
+header nav li::after {
+    content: '';
+    display: block;
+    height: 2px; /* Height of the underline */
+    background: rgba(248, 202, 123, 0.967); /* Color of the underline */
+    width: 0; /* Start with zero width */
+    position: absolute; /* Position it below the link */
+    left: 0;
+    bottom: -5px; /* Space between link and underline */
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+header nav li:not(:last-child):hover::after {
+    width: 100%; /* Expand width on hover */
+}
+header.scrolled {
+    background-color: #1C3720;
+    transition: background-color 0.3s;
+}#contactBtn {
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.931);
+    transition: transform 0.2s, background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#contactBtn:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: darkorange;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+#home {
+    display: flex; /* Changed from grid to flex for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    background-image: url('azalan bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center; /* Center text alignment */
+    position: relative; /* Needed for absolute positioning of h6 */
+}
+
+.home-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.home-content h1 {
+    margin-bottom: -17px;
+    font-size: 3rem;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.home-content p {
+    margin-bottom: 30px;
+    font-style: italic;
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+
+
+}
+
+.home-content h6 {
+ 
+    font-weight: lighter;
+    font-size: 1rem;
+    transition: font-size 0.3s ease-in-out;
+
+}
+
+.reserve-btn {
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.939);
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.reserve-btn:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+/* Featured Items */
+.featured-items {
+    position: relative; /* Ensures we can position elements relative to this container */
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #FFFFE0, #8ab49193,#FFFFE0,#fff);
+  
+    max-width: 100%; /* Ensures the container does not exceed the viewport */
+
+}
+
+
+
+/* Ensuring the SVG stays behind the text */
+
+
+/* Positioning the h2 title on the wave */
+.featured-items .title {
+    font-size: 2.5rem; /* Adjust the size as needed */
+    color:#1C3720; /* Make sure the text is visible against the background */
+    text-shadow: orange;
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Optional: Make it bold for emphasis */
+    position: relative; /* Ensure the title is positioned above content */
+    transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+    z-index: 1; /* Ensure it's above other content */
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.3rem;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.item {
+    text-align: center;
+    background: #f8f8f89c;
+    padding: 1.5rem;
+    border-radius: 8px;
+
+    width: 200px; /* Set a fixed width for each item */ 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.item .price {
+    font-weight: bold;
+    color: #1C3720;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .menu-icon {
+        display: block;
+    }
+    .featured-items {
+        margin-top: -150px; /* Increase negative margin to elevate the featured items */
+        padding: 3rem 1rem;  /* Adjust padding if needed */
+    }
+    header nav ul {
+        display: none;
+    }
+
+    .navlist.open ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    
+
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+    .featured-items {
+        margin-top: -120px;  /* Further lift the featured items for very small screens */
+        padding: 2rem 1rem;  /* Adjust padding for smaller screens */
+    }
+    .item img {
+        max-width: 120px;
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 780px) {
+    .navlist {
+        padding: 5% 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        text-align: center;
+        background: #1C3720;
+        width: 100%;
+        gap: 30px;
+       
+    }
+
+    .logo {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #contactBtn {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    #contactBtn:hover {
+        background-color: transparent;
+    }
+
+    .subtitle {
+        display: block;
+    }
+
+    .navlist.open {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    header {
+        background-color: #1C3720;
+    }
+
+    header nav li:not(:last-child):hover::after {
+        content: none;
+    }
+
+   
+    .home-content h1 {
+        margin-bottom: -13px;
+        font-size: 1.4rem; /* Responsive size */
+    }
+
+    .home-content p {
+        margin-bottom: 20px;
+        font-style: italic;
+        font-size: 0.9rem; /* Responsive size */
+    }
+
+    .home-content h6 {
+        font-size: 0.7rem; /* Responsive size */
+    }
+
+    .reserve-btn {
+        padding: 5px 10px;
+        font-size: 0.7rem; /* Responsive size */
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .navlist {
+        padding: 5% 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        text-align: center;
+        background: #1C3720;
+        width: 100%;
+        gap: 30px;
+    }
+
+    #contactBtn {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    #contactBtn:hover {
+        background-color: transparent;
+    }
+
+    .logo {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        margin: 10px;
+        transform: translateX(-50%);
+    }
+
+    .subtitle {
+        display: block;
+    }
+
+    .navlist.open {
+        display: flex;
+    }
+   
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    header {
+        background-color: #1C3720;
+        padding: 10px;
+    }
+
+    header nav li:not(:last-child):hover::after {
+        content: none;
+    }
+
+    #home {
+        margin-top: 10px;
+        padding-top: 50px; /* Adjusted padding for smaller screens */
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .home-content h1 {
+        margin-bottom: 20px;
+        font-size: 1rem; /* Responsive size */
+    }
+
+    .home-content p {
+        margin-bottom: 20px;
+        font-style: italic;
+        font-size: 0.6rem; /* Decreased size */
+    }
+
+    .home-content h6 {
+        font-size: 0.4rem; /* Decreased size */
+    }
+
+    .reserve-btn {
+        background-color: orange;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.931);
+        font-size: 0.8rem; /* Decreased size */
+        margin-bottom: 70px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+}
