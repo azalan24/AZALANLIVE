@@ -3,392 +3,665 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="foodpanda.css">
-    <link rel="stylesheet" href="abt.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="footer.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="keywords" content="Azalan Kamayan Restaurant,  restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
+    <meta name="author" content="Your Name">
+    <title>Azalan Kamayan Restaurant</title>
+    <link rel="stylesheet" href="featured-dishes.css">
+    <link rel="stylesheet" href="rrabout.css">
+    <link rel="stylesheet" href="testimony.css">
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Holtwood+One+SC&family=Josefin+Sans:wght@100..700&family=Lato:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+    <!--poppins-font-family------------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--using-Font-Awesome-------------------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    
+    <!-- Styles -->
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: poppins;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            margin-top: 30px; /* Initial top margin for blending */
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            transition: background-color 0.3s ease, margin-top 0.3s ease;
+        }
+
+ 
+
+
+        .navbar.scrolled {
+            background-color: #015c19;
+           
+            margin-top: 0; /* Remove margin when scrolling */
+            box-shadow: 0 4px 10px rgba(85, 85, 85, 0.681); /* Shadow effect when scrolled */
+        
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            
+            color: orange;
+            font-size: 1.4rem;
+        }
+
+        .logo-text p {
+            margin: -2px 0 0 0;
+            font-size: 9px;
+            color: white;
+        }
+
+        /* Center the nav menu */
+        .nav-links {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    transition: color 0.3s;
+    font-size: 1rem;
+    
+        }
+
+        .nav-links ul li a::after {
+            content: '';
+            display: block;
+            height: 2px; /* Height of the underline */
+            background: rgba(248, 202, 123, 0.967); /* Color of the underline */
+            width: 0; /* Start with zero width */
+            position: absolute; /* Position it below the link */
+            left: 0;
+            bottom: -5px; /* Space between link and underline */
+            transition: width 0.3s ease-in-out; /* Smooth transition */
+        }
+        .nav-links ul li a:hover {
+            color: #d2e0c0; /* Change text color on hover */
+        }
+
+        .nav-links ul li a:hover::after {
+            width: 100%; /* Expand line to full text length on hover */
+           
+        }
+        .search-bar {
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+           
+            width: 150px; /* Adjust width of the search bar */
+            transition: width 0.3s ease;
+            margin-left: 20px;
+        }
+        .search-bar:focus {
+            width: 250px;
+            border-color: #015c19;
+        }
+
+        .search-btn {
+            background-color: #ac732a;
+            border: none;
+            padding: 7px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+       
+        /* Hamburger and X Icons */
+        #menu-icon {
+            font-size: 1.8rem;
+            padding-left: 20px; /* Adjust padding if needed */
+            cursor: pointer;
+            color: white;
+            position: fixed; /* Make it stay visible */
+            /* Set its position relative to the top */
+            right: 30px; /* Align it to the right edge */
+            z-index: 15; /* Ensure it stays above other elements */
+            transition: margin-left 0.3s;
+        }
+        #menu-icon:hover {
+            transform: scale(1.2); /* Slightly increase size on hover */
+            transition: transform 0.3s ease;
+        }
+/* Home Section h4 */
+.home-content h4 {
+    font-weight: 540;
+    margin-bottom: 70px;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: clamp(0.7rem, 2vw, 1.3rem);
+    
+    max-width: 950px; /* Optional: limit max width */
+    margin: 0 auto; /* Center the element */
+}
+
+.home-content h1 {
+   margin-top: -30px;
+    margin-bottom: 40px;  /* Space added below h1 */
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+        /* Mobile Responsive */
+        @media screen and (max-width: 788px) {
+            #home {
+                padding-top: 100px;  /* Increase space on smaller screens */
+            }
+            #home{
+            max-height:100vh;
+           }
+            .nav-links ul {
+                padding: 7% 0;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 0 10px 10px 0;
+                text-align: center;
+                background: #1C3720;
+                width: 70%;
+                height: 100vh;
+                gap: 30px;
+                transform: translateX(-100%); /* Initially hidden */
+                transition: transform 0.5s ease-in-out; /* Smooth slide-in and slide-out */
+            }
+
+        .nav-links ul li a:hover::after {
+            width: 0; /* Expand line to full text length on hover */
+           
+        }
+            .nav-links.active ul {
+                transform: translateX(0); /* Slide in when active */
+            }
+
+            #menu-icon {
+                display: block;
+            }
+        }
+
+        /* For larger screens, the menu should remain horizontal */
+        @media screen and (min-width: 788px) {
+            .nav-links ul {
+                display: flex;
+                opacity: 1;
+                transform: none;
+            }
+
+            #menu-icon {
+                display: none;
+            }
+            
+        }
+
+        /* Home Section */
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            background-size: cover;
+            
+            background-image: url('azalan bg.png');
+            background-position: center;
+            transition: background-image 1s ease-in-out; /* Smooth transition for background */
+            padding-top: 40px;
+        }
+
+        /* Semi-transparent overlay for better text visibility */
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #15131399; /* Dark overlay for contrast */
+            z-index: 1;
+        }
+
+        .home-content {
+            z-index: 2;
+            padding: 10px;
+           
+        }
+
+       
+
+        .home-content p {
+            
+           font-weight:300;
+           margin-top: -20px;
+          margin-bottom: -100px;
+           align-items: center;
+            font-size: clamp(0.3rem, 2vw, 0.6rem);
+        }
+        .home-content h4{
+            
+            font-weight: 540;
+            margin-bottom: 60px;
+           align-items: center;
+            font-size: clamp(1rem, 1.3vw, 2rem);
+        }
+
+       
+
+        .reserve-btn {
+            display: inline-block;
+            
+            padding: 10px 20px;
+            background-color: #f8a534;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .reserve-btn:hover {
+            background-color: rgb(197, 133, 15);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-        <a href="#home" class="logo-name">AZALAN</a>
-        <a href="#home" class="subtitle">Kamayan Restaurant</a>
-    </div>
-    <div class="menu-icon bx bx-menu" id="menu-icon"></div>
-    <nav>
-        <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href=".about-us">About</a></li>
-         
-            <li>
-                <a href="#featured-items">Menu</a>
-            </li>
-            
-       
-            <li><a href="#reservation" onclick="handleReservationClick(event)">Reservation</a></li>
-         
-            <li><a href=".contact-section" id="contactBtn">Contact Us</a></li>
-        </ul>
+ <nav class="navbar" id="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="logo-text">
+                <h1>AZALAN</h1>
+                <p>Kamayan restaurant</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#testimonials">About</a></li>
+                <li><a href="#featured-dishes">Menu</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- Search bar inside navbar -->
+                <li>
+                    <input type="text" placeholder="Search..." class="search-bar">
+                    <button class="search-btn"><i class="bx bx-search"></i></button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-icon bx bx-menu" id="menu-icon"></div>
     </nav>
-</header>
 
-
-    <section id="home" class="section home">
+    <section id="home">
         <div class="home-content">
-            <h1>Savor the flavor of the tradition</h1>
-            <p>Filipino dishes that bring everyone to the table</p>
-            <a href="#reservation" class="reserve-btn" onclick="handleReserveClick(event)">Reserve Now</a>
-            <h6>Open from 10:00 AM - 9:00 PM</h6>
-        </div>
-    </section>
-
-   
-
-    
-        <section id="featured-items" class="featured-items">  
-
-      
-
-        <h2 class="title">Featured meals</h2>
-        <div class="container">
+            <h1>Savor the flavor of the tradition </h1>
+            <h4>Indulge in the rich flavors of Filipino cuisine, expertly grilled to perfection. From succulent meats to savory seafood, every bite is a testament to our culinary heritage. Join us and experience the heart of Roxas City’s dining scene.</h4>
             
-            <div class="item">
-                <h3 class="item-label">inasal-pecho</h3>
-                <img src="inasal.jpg" alt="Item 1">
-                <p class="price">Served with unli rice</p>
-            </div>
-            <div class="item">
-                <h3 class="item-label">inihaw na lucos</h3>
-                <img src="luok.jpg" alt="Item 1">
-                <p class="price">medium size squid </p>
-            </div>
+            <a href="#reservation" class="reserve-btn">Reserve Now</a><br><br>
             
-            <div class="item">
-                <h3 class="item-label">lomi overload</h3>
-                <img src="lomi overload.jpg" alt="Item 2">
-                <p class="price">assorted overload toppings</p>
-            </div>
-            <div class="item">
-                <h3 class="item-label">pinakbet</h3>
-                <img src="pakbet.png" alt="Item 3">
-                <p class="price">native vegetables, and pork</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about-us" class="about-us">
-        <div class="about-text">
-            <h1>The Story</h1>
-          <p>
-            Azalan Kamayan Restaurant was envisioned and brought to life by Mrs. Hyacinth O. Viterbo, driven by a deep passion for Filipino cuisine and a special love for inasal na manok. This flavorful, grilled chicken dish has become the heart of the menu, celebrated as the restaurant’s signature offering and a consistent favorite among guests. At Azalan Kamayan, the vision is to create a dining experience that not only honors tradition but also fosters the joy of sharing meals with loved ones, surrounded by authentic flavors and heartfelt hospitality.  </div>
-    
-        <div class="about-images">
-          <div class="image-row">
-            <div class="image-item">
-              <img src="34.jpg" alt="Image 1">
-            </div>
-            <div class="image-item">
-              <img src="ad.jpg" alt="Image 2">
-            </div>
-          </div>
-    
-          <div class="center-image">
-            <div class="image-item">
-              <img src="2d.jpg" alt="Center Image">
-            </div>
-          </div>
-    
-          <div class="image-row">
-            <div class="image-item">
-              <img src="5g.jpg" alt="Image 3">
-            </div>
-            <div class="image-item">
-              <img src="ab.jpg" alt="Image 4">
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Food Panda Section -->
-      <section class="food-panda-section">
-        <h2>We Are on Food Panda Now!</h2>
-        <div class="qr-text">
-            <p><strong>It's All at Your Fingertips to Savor the Flavor of our delightful dishes </strong><br><br><span>Orders are accepted from 10:30 AM to 8:00 PM daily. Get your favorite food delivered directly to your door!</span></p>
-        </div>
-        <div class="app-buttons">
-            <a href="https://apps.apple.com/us/app/apple-store/id375380948" target="_blank"tabIndex="0">
-                <img src="apple.jpg" alt="App Store">
-            </a>
-            <a href="https://play.google.com/store/games?device=windows" target="_blank" tabIndex="0">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Google Play">
-            </a>
-            <a href="https://appgallery.huawei.com/Featured" tabIndex="0">
-                <img src="huawei.png" alt="AppGallery">
-            </a>
-        </div>
-    </section>
-
-    <section class="text-image-section">
-        <div class="content">
-            <!-- Text Content -->
-            <div class="text">
-                <h2>What We Stand For?</h2>
-                <p>Savor the spirit of tradition with our authentic Kamayan dining experience, where carefully crafted dishes are served to bring everyone together in a shared celebration of flavor, culture, and connection. Enjoy the joy of eating with your hands, surrounded by friends and family, as we create unforgettable moments around the table.</p>
-                <a href="#about-us" class="learn-more">Learn More</a>
-                
-            </div>
-    
-            <!-- Image Content -->
-            <div class="image">
-                <img src="ddd.jpg" alt="Delicious Food">
-            </div>
+            <h6>OPERATING HOURS</h6>
+                <p>9 AM to 10 PM - Monday to Friday<br>
+                9 AM to 10 PM - Monday toFriday<p>
         </div>
         
     </section>
-   
-    <section id="contact-section"  class="contact-section">
-        <h1 class="page-heading">We'd Love to Hear From You!</h1>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-           <br> <h2>Send Us a Message</h2>
-            <form action="#" method="POST">
-                <div class="form-group name-fields">
-                    <div class="name-field">
-                        <label for="firstname">First Name</label>
-                        <input type="text" id="firstname" name="firstname" required>
+    <section class="featured-dishes"id="featured-dishes">
+        <div class ="headss">
+        <h1>Our Featured Dishes</h1>
+        <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family, and make lasting memories around the table. Join us at Azalan Kamayan Restaurant for an unforgettable dining experience.</p>
+    </div><div class="dishes-container">
+            <div class="dish">
+                <img src="inasal.jpg" alt="Chicken Inasal">
+                <div class="dish-content">
+                    <h3>Chicken Inasal</h3>
+                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
+                </div>
+           
+            </div>
+            <div class="dish">
+                <img src="pakbet.png" alt="Pork Barbeque">
+                <div class="dish-content">
+                    <h3>Pork Barbeque</h3>
+                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="sisigkampan.jpg" alt="Malarn">
+                <div class="dish-content">
+                    <h3>Malarn</h3>
+                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="menu-button">See menu</a>
+    </section>
+     <!--Testimonials------------------->
+   <section id="testimonials">
+    <!--heading--->
+    <div class="testimonial-heading">
+        <h1>Customers review</h1>
+        
+    </div>
+    <!--testimonials-box-container------>
+    <div class="testimonial-box-container">
+        <!--BOX-1-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-1.jpg" />
                     </div>
-                    <div class="name-field">
-                        <label for="lastname">Last Name</label>
-                        <input type="text" id="lastname" name="lastname" required>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Touseeq Ijaz</strong>
+                       
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis?  ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+            </div>
+        </div>
+        <!--BOX-2-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-2.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>J.K Rowling</strong>
+                        
+                    </div>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-
-        <!-- Contact Info and Opening Hours Section -->
-        <div class="contact-info-hours">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p><strong>Address:</strong> The Plant Farm, Sacred Heart of Jesus Blvd. Pueblo de Panay Township, Lawa-An, Philippines</p>
-                <p><strong>Phone:</strong> 0963 625 9801</p>
-                <p><strong>Email:</strong> Azalankamayan24@gmail.com</p>
-
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                     <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><!--Empty star-->
+                </div>
             </div>
-
-            <!-- Opening Hours -->
-            <div class="hours">
-                <h3>Opening Hours</h3>
-                <p>Monday - Friday </p>
-                
-                <p>10:00 AM - 9:00 PM</p>
-                
-                <p>Sun: Closed</p>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
             </div>
         </div>
-        <div id="custom-alert" class="custom-modal">
-            <div class="custom-modal-content">
-                <p>Sorry, your message cannot be processed at the moment. Please try again later.</p>
-                <button id="close-alert">OK</button>
+        <!--BOX-3-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-3.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Harry Potter</strong>
+                       
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
             </div>
         </div>
-        
-    </section>
-
-    <footer id="footer">
-        <!-- Footer Columns -->
-        <div class="footer-content">
-            <!-- Contact Us Column -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Pueblo de Panay Township, Roxas City, Capiz, 5800</p>
-                <p><i class="fas fa-phone"></i> 0991-345-777</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:azalankamayan@gmail.com">azalankamayan@gmail.com</a></p>
+        <!--BOX-4-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-4.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Oliva</strong>
+                        
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
             </div>
-
-            <!-- Quick Links Column -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Developer Column -->
-            <div class="footer-column">
-                <h3>Developer</h3>
-                <p>Redgie-RR Bula</p>
-                <p>Jane Dela Torre</p>
-                <p>Christine Leilani Delay</p>
-                <p>Jevy Farofaldane</p>
-            </div>
-
-            <!-- QR Code and Title Column -->
-            <div class="footer-column" style="text-align: center;">
-                <img src="frame.png" alt="QR Code" class="qr-code">
-                <h2>AZALAN</h2>
-                <p class="subtitle">KAMAYAN RESTAURANT</p>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
             </div>
         </div>
 
-        <!-- Footer Bottom Section with Social Icons Positioned to the Right on Larger Screens -->
-        <div class="footer-bottom">
-            <div class="copyright">
-                &copy; Azalan Kamayan Restaurant 2024
+        <!--BOX-6-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-4.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Oliva</strong>
+                        
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
             </div>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://foodpanda.com" target="_blank"><i class="fas fa-utensils"></i></a>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis?  Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
             </div>
         </div>
-    </footer>
-   
-    <script>
-
+    </div>
+</section>
+  <script>   // Toggle mobile menu
+    let menu = document.querySelector('#menu-icon');
+    let navlist = document.querySelector('.nav-links');
+    let navLinks = document.querySelectorAll('.nav-links ul li a');
     
-            function navigateToPage() {
-                window.location.href = "menuwithheader.html"; // Adjust the path as needed
-            }
-      
-        
-        // Scroll effect for header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 0) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+    // Function to toggle the mobile menu
+    menu.onclick = () => {
+        menu.classList.toggle('bx-x'); // Change icon to 'X'
+        navlist.classList.toggle('active'); // Trigger animation
+    };
+    
+    // Hide menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navlist.classList.remove('active'); // Hide the menu
+            menu.classList.remove('bx-x'); // Reset the icon
         });
-
-        // Smooth scrolling for navigation links
-        const links = document.querySelectorAll('nav ul li a');
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Toggle mobile menu
-        let menu = document.querySelector('#menu-icon');
-        let navlist = document.querySelector('.navlist');
-
-        menu.onclick = () => {
-            menu.classList.toggle('bx-x'); // Change icon to 'X'
-            navlist.classList.toggle('open'); // Toggle navigation visibility
-        };
-
-        const items = document.querySelectorAll('.item');
-const observerOptions = {
-    root: null, // Use the viewport as the root
-    threshold: 0.1 // Trigger when 10% of the item is visible
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target); // Stop observing after showing
+    });
+    
+    // Navbar scroll behavior (optional)
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
     });
-}, observerOptions);
-
-window.onload = function() {
-    // Add class to trigger the fade-in effect when the page is fully loaded
-    document.querySelector('.contact-section').classList.add('fade-in');
-};
-
-// Scroll Reveal Effect
-window.addEventListener('scroll', function() {
-let elements = document.querySelectorAll('.scroll-reveal');
-let scrollPosition = window.innerHeight + window.scrollY;
-
-elements.forEach(function(element) {
-if (element.offsetTop < scrollPosition) {
-    element.classList.add('visible');
-}
-});
-});document.querySelector('.contact-form form').addEventListener('submit', function(event) {
-event.preventDefault(); // Prevent the form from submitting
-
-// Show the custom alert modal
-document.getElementById('custom-alert').style.display = 'flex';
-});
-
-// Close the modal, clear the form, and reset fields when clicking the OK button
-document.getElementById('close-alert').addEventListener('click', function() {
-document.getElementById('custom-alert').style.display = 'none'; // Hide the alert modal
-
-// Clear the contact form fields
-document.querySelector('.contact-form form').reset();
-});
-// Add event listener to the submit button
-document.querySelector('.reserve-button').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting
-    alert('Sorry, your message cannot be reviewed at the moment. Please try again later.');
-});
-
-function handleReserveClick(event) {
-    event.preventDefault(); // Prevent the default link behavior
-
-    // Check if the target element exists
-    const target = document.querySelector('#reservation');
-
-    if (target) {
-        // Scroll to the reservation section if it exists
-        target.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        // Handle the error if the target section is not found
-        alert('Sorry, the reservation page is currently unavailable.');
+    // Function to change background image every 5 seconds
+    let images = [
+    'azalan bg.png',
+    '2d.jpg',
+    'yum.jpg',
+    'out.jpg'
+    ];
+    let currentIndex = 0;
+    
+    function changeBackground() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('home').style.backgroundImage = `url('${images[currentIndex]}')`;
     }
-}
+    
+    // Change background every 5 seconds
+    setInterval(changeBackground, 5000);
 
-function handleReservationClick(event) {
-    event.preventDefault(); // Prevent the default anchor behavior
+    //gallery script
+    const galleryImages = document.querySelectorAll('.gallery-item');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    const initialVisibleCount = 6; // Show only the first 6 images initially
 
-    // Check if the target element exists
-    const target = document.querySelector('#reservation');
-
-    if (target) {
-        // Scroll to the reservation section if it exists
-        target.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        // Handle the error if the target section is not found
-        alert('Sorry, the reservation page is currently unavailable.');
+    // Initially hide all but the first 6 images
+    for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+        galleryImages[i].style.display = 'none';
     }
-}
-</script>
 
+    // Show More functionality
+    let showMore = false;
+    showMoreBtn.addEventListener('click', () => {
+        showMore = !showMore;
+        if (showMore) {
+            // Show all images
+            galleryImages.forEach(item => {
+                item.style.display = 'block';
+            });
+            showMoreBtn.textContent = 'Show Less'; // Change button text
+        } else {
+            // Hide images beyond the first 6
+            for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+                galleryImages[i].style.display = 'none';
+            }
+            showMoreBtn.textContent = 'Show More'; // Revert button text
+        }
+    });
+
+    // Modal functionality for image zoom
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function () {
+            const imgSrc = this.querySelector('img').src;
+            document.getElementById('modalImage').src = imgSrc;
+            document.getElementById('modal').classList.add('show');
+        });
+    });
+
+    // Close modal when the close button is clicked
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('modal').classList.remove('show');
+    });
+
+    // Close modal when clicking outside the image
+    document.getElementById('modal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('modal')) {
+            document.getElementById('modal').classList.remove('show');
+        }
+    });
+        </script> 
 </body>
 </html>
