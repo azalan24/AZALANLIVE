@@ -175,10 +175,9 @@
         @media screen and (max-width: 788px) {
             #home {
                 padding-top: 100px;  /* Increase space on smaller screens */
+                 max-height:80vh;
             }
-            #home{
-                height:80vh;
-           }
+           
             .nav-links ul {
                 padding: 7% 0;
                 display: flex;
