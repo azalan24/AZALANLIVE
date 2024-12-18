@@ -1,338 +1,154 @@
-    html{
-            scroll-behavior: smooth;
-        }
-        /* General Reset */
-        body {
-            margin: 0;
-            font-family: poppins;
-            overflow-x: hidden;
-        }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: transparent;
-            margin-top: 30px; /* Initial top margin for blending */
-            padding: 10px 20px;
-            position: fixed;
-            width: 100%;
-            z-index: 10;
-            transition: background-color 0.3s ease, margin-top 0.3s ease;
-        }
-
- 
-
-
-        .navbar.scrolled {
-            background-color: #015c19;
-           
-            margin-top: 0; /* Remove margin when scrolling */
-            box-shadow: 0 4px 10px rgba(85, 85, 85, 0.681); /* Shadow effect when scrolled */
-        
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-        }
-
-        .logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-
-        .logo-text h1 {
-            margin: 0;
-            
-            color: orange;
-            font-size: 1.4rem;
-        }
-
-        .logo-text p {
-            margin: -2px 0 0 0;
-            font-size: 9px;
-            color: white;
-        }
-
-        /* Center the nav menu */
-        .nav-links {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-links ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .nav-links ul li {
-            margin: 0 15px;
-            position: relative;
-        }
-
-        .nav-links ul li a {
-            text-decoration: none;
-    color: white;
-    padding: 10px 5px;
-    text-align: center;
-    transition: color 0.3s;
-    font-size: 1rem;
     
-        }
-
-        .nav-links ul li a::after {
-            content: '';
-            display: block;
-            height: 2px; /* Height of the underline */
-            background: rgba(248, 202, 123, 0.967); /* Color of the underline */
-            width: 0; /* Start with zero width */
-            position: absolute; /* Position it below the link */
-            left: 0;
-            bottom: -5px; /* Space between link and underline */
-            transition: width 0.3s ease-in-out; /* Smooth transition */
-        }
-        .nav-links ul li a:hover {
-            color: #d2e0c0; /* Change text color on hover */
-        }
-
-        .nav-links ul li a:hover::after {
-            width: 100%; /* Expand line to full text length on hover */
+        .featured-dishes {
            
+            text-align: center;
+             padding: 50px 20px;
         }
-        /* Container for the search bar */
-.search-bar-container {
-    position: relative;
-    display: inline-block;
-    width: 250px; /* Default width of the container */
-}
-
-/* Default state for search bar (hidden) */
-.search-bar {
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
-    width: 0; /* Initially hidden */
-    opacity: 0; /* Initially invisible */
-    transition: width 0.3s ease, opacity 0.3s ease;
-    padding-right: 30px; /* Space for the search icon */
-}
-
-/* Focus style for the search bar */
-.search-bar:focus {
-    border-color: #015c19;
-}
-
-/* Style for the search button */
-.search-btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #ac732a;
-    position: absolute;
-    right: 10px; /* Right-align the search icon */
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* When the search bar is expanded */
-.search-bar.expanded {
-    width: 230px; /* Width when expanded */
-    opacity: 1; /* Make it visible */
-    padding: 5px 10px; /* Adjust padding */
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 600px) {
-    /* For very small screens, the search bar container is still visible but compact */
-    .search-bar-container {
-        width: 150px; /* Smaller container width */
-    }
-
-    .search-bar {
-        width: 0; /* Keep the input box hidden by default */
-        opacity: 0; /* Keep the input box invisible */
-    }
-
-    /* Expanded state for the search bar on small screens */
-    .search-bar.expanded {
-        width: 80%; /* On small screens, take up 80% of the available width */
-    }
-}
-
-      
-        
-       
-        /* Hamburger and X Icons */
-        #menu-icon {
-            font-size: 1.8rem;
-            padding-left: 20px; /* Adjust padding if needed */
-            cursor: pointer;
-            color: white;
-            position: fixed; /* Make it stay visible */
-            /* Set its position relative to the top */
-            right: 30px; /* Align it to the right edge */
-            z-index: 15; /* Ensure it stays above other elements */
-            transition: margin-left 0.3s;
+    
+        .featured-dishes h2 {
+            font-size: 2.5em;
+             color: #333;
+             
         }
-        #menu-icon:hover {
-            transform: scale(1.2); /* Slightly increase size on hover */
-            transition: transform 0.3s ease;
+    
+        .headss p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 10px 0 40px;
+            max-width: 80%;
+            font-weight: 300;
+            justify-content: justify;
+            margin-left: auto;
+            margin-right: auto;
         }
-/* Home Section h4 */
-.home-content h4 {
-    font-weight:lighter;
-    margin-bottom: 60px;
-    align-items: center;
-    text-align: center;
-   
-    font-size: clamp(0.6rem, 2vw, 1.5rem);
-  
-    max-width: 950px; /* Optional: limit max width */
-    margin: 0 auto; /* Center the element */
-}
-
-.home-content h1 {
-   margin-top: -5px;
-    margin-bottom: 30px;  /* Space added below h1 */
-    font-weight: bold;
-    color: #fff;
-   
-  
-    font-size: clamp(2rem, 5vw, 3rem);
-}
-        /* Mobile Responsive */
-        @media screen and (max-width: 788px) {
-            #home {
-                padding-top: 100px;  /* Increase space on smaller screens */
-                max-height:95vh;
-           }
-            .nav-links ul {
-                padding: 7% 0;
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border-radius: 0 10px 10px 0;
-                text-align: left;
-                background:rgb(20, 95, 0);
-                width: 50%;
-                height: 100vh;
-                gap: 30px;
-                transform: translateX(-100%); /* Initially hidden */
-                transition: transform 0.5s ease-in-out; /* Smooth slide-in and slide-out */
-            }
-
-        .nav-links ul li a:hover::after {
-            width: 0; /* Expand line to full text length on hover */
-           
+        .dishes-container p {
+            font-size: 1rem;
+            color: #555;
+            margin: 10px 0 40px;
+            max-width: 100%;
+            justify-content: justify;
+            margin-left: auto;
+            margin-right: auto;
         }
-            .nav-links.active ul {
-                transform: translateX(0); /* Slide in when active */
-            }
-
-            #menu-icon {
-                display: block;
-            }
-        }
-
-        /* For larger screens, the menu should remain horizontal */
-        @media screen and (min-width: 788px) {
-            .nav-links ul {
-                display: flex;
-                opacity: 1;
-                transform: none;
-            }
-
-            #menu-icon {
-                display: none;
-            }
-            
-        }
-
-        /* Home Section */
-        #home {
+    
+        .dishes-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            color: white;
-            height:90vh;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    
+        .dish {
+            background-color: #fff;
+           border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             text-align: center;
-            position: relative;
-            background-size: cover;
-            
-            background-image: url('azalan bg.png');
-            background-position: center;
-            transition: background-image 1s ease-in-out; /* Smooth transition for background */
-            padding-top: 40px;
+            width: 350px;
+            margin: 10px;
         }
-
-        /* Semi-transparent overlay for better text visibility */
-        #home::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+    
+        .dish img {
             width: 100%;
-            height: 100%;
-            background-color: #15131399; /* Dark overlay for contrast */
-            z-index: 1;
+            height: 220px;
+            object-fit:fill;
+            display: block;
         }
-
-        .home-content {
-            z-index: 2;
-            padding: 10px;
-           
+    
+        .dish-content {
+            padding: 15px;
         }
-
-       
-
-        .home-content p {
-            
-           font-weight:300;
-           margin-top: -20px;
-          margin-bottom: -100px;
-           align-items: center;
-            font-size: clamp(0.3rem, 2vw, 0.6rem);
+    
+        .dish h3 {
+            margin: 0 0 10px;
+            font-size: 1.25rem;
+            color: #333;
         }
-        .home-content h4{
-           
-           
-            margin-bottom: 30px;
-           align-items: center;
-            font-size: clamp(1rem, 1.3vw, 1.5rem);
+    
+        .dish p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
         }
-
-       
-
-        .reserve-btn {
+    
+        .menu-button {
             display: inline-block;
-            
+            margin-top: 40px;
             padding: 10px 20px;
-            background-color: #0c922b;
+            background-color: #f8a534;
             color: #fff;
             text-decoration: none;
-            font-size: 0.9rem;
-            margin-bottom: -10px;
-            font-weight:6500;
+            font-size: 1rem;
+            border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-
-        .reserve-btn:hover {
-            background-color: rgb(1, 130, 24);
-            transform: scale(1.1);
+    
+        .menu-button:hover {
+            background-color: #e38f1e;
+        }
+    
+      
+        @media (max-width: 768px) {
+            .featured-dishes h1 {
+                font-size: 32px;
+               
+            }
+    
+            .featured-dishes p {
+                font-size: 0.9rem;
+               
+            }
+    
+            .dishes-container {
+                flex-direction: column; 
+                align-items: center;
+            }
+    
+            .dish {
+                width: 100%; 
+                margin: 5px;
+            }
+    .dish h3{
+        font-size: 1.1rem;
+    }
+            .dish img {
+                height: 200px; 
+                object-fit: cover;
+            }
+    
+            .menu-button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    
+      
+        @media (max-width: 480px) {
+            .featured-dishes h1 {
+                font-size: 1.8rem;
+            }
+    
+            .featured-dishes p {
+                font-size: 0.8rem;
+            }
+    
+            .dish {
+                width: 100%; 
+            }
+    
+            .dish img {
+                height: 180px; 
+            }
+    
+            .dish-content {
+                padding: 10px;
+            }
+    .dish h3{
+       font-size:  1.15rem;
+    }
+            .menu-button {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
         }
