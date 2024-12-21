@@ -93,7 +93,7 @@
         .logo-text h1 {
             margin: 0;
             
-            color: orange;
+            color: rgb(229, 150, 3);
             font-size: 1.4rem;
         }
 
@@ -106,15 +106,22 @@
 /* When scrolled, reposition the logo text back to the right side of the logo */
 .navbar.scrolled .logo-container {
     flex-direction: row; /* Keep logo and text in a row */
+margin-left: 3px;
+transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
+   
+    justify-content:left; /* Center horizontally */
+   
 }
+
 
 .navbar.scrolled .logo-text {
     margin-top: 0;
-    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+    
+    transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
     margin-left: -5px; /* Ensure logo text moves back to the right after scrolling */
 }
 .navbar.scrolled .logo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem;margin-top: -3px;
     transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
     
 }
@@ -123,7 +130,10 @@
     transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
     
 }
-
+.navbar.scrolled .logo {
+   width: 60px;
+   height: 60px;
+}
  
         /* Center the nav menu */
         .nav-links {
@@ -164,6 +174,7 @@
             width: 0; /* Start with zero width */
             position: absolute; /* Position it below the link */
             left: 0;
+            margin-top: 2px;
                  transition: width 0.3s ease-in-out; /* Smooth transition */
         }
         .nav-links ul li a:hover {
@@ -244,7 +255,7 @@
     font-size: 1.5rem;
             padding-left: 20px; /* Adjust padding if needed */
             cursor: pointer;
-            color: white;
+            color: rgb(194, 194, 194);
             position: fixed; /* Make it stay visible */
             /* Set its position relative to the top */
             right: 30px; /* Align it to the right edge */
@@ -281,10 +292,20 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #15131399; /* Dark overlay for contrast */
+    background-color: #151313a9; /* Dark overlay for contrast */
     z-index: 1;
 }
-
+#home .background-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+}
 .home-content {
     z-index: 2;
     padding: 10px;
@@ -332,9 +353,9 @@
 .home-content h1 {
  margin-top: -30px;
     margin-bottom: 30px;  /* Space added below h1 */
-    font-weight: bold;
+    font-weight:600;
     color: #fff;
-   
+   font-family: Arial, Helvetica, sans-serif;
   
     font-size: clamp(2rem, 3vw, 3rem);
 }
@@ -389,8 +410,8 @@
             }
         
             .logo {
-                width: 60px; /* Adjust logo size for small screens */
-                height: 60px;
+                width: 70px; /* Adjust logo size for small screens */
+                height: 70px;
             }
         
             .logo-text {
@@ -437,7 +458,9 @@
                 transition: transform 0.5s ease-in-out; /* Smooth slide-in and slide-out */
             }  #menu-icon {
                 margin: 10px; /* Increase this value to lower the icon */
+                
             }
+            
             .nav-links ul li a:hover{
                 color: #faa11c;
             }
@@ -570,6 +593,170 @@
         </div>
         
     </section>
+  <!--Testimonials------------------->
+  <section id="testimonials">
+    <!--heading--->
+    <div class="testimonial-heading">
+        <h1>Customers review</h1>
+        
+    </div>
+    <!--testimonials-box-container------>
+    <div class="testimonial-box-container">
+        <!--BOX-1-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-1.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Touseeq Ijaz</strong>
+                       
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>I’ve never experienced anything like the Kamayan style of dining, and Azalan did it perfectly! The variety of dishes was amazing, and the flavors took me straight back to the Philippines. Definitely a must-try if you’re in the area.</p>
+            </div>
+        </div>
+        <!--BOX-2-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-2.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>J.K Rowling</strong>
+                        
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>The atmosphere at Azalan Kamayan is unlike any other. The blend of Filipino culture and modern dining creates such a fun and relaxing vibe. The food was outstanding, with everything from the grilled meats to the fresh seafood cooked to perfection. I’ll be back for sure!</p>
+            </div>
+        </div>
+        <!--BOX-3-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-3.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Harry Potter</strong>
+                       
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>What a fantastic dining experience! The food was not only delicious but also beautifully presented. It was a great way to experience Filipino cuisine with friends, and the portions were generous. The warm hospitality made it an even more memorable evening.</p>
+            </div>
+        </div>
+         <!--BOX-3-------------->
+         <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-3.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Harry Potter</strong>
+                       
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>What a fantastic dining experience! The food was not only delicious but also beautifully presented. It was a great way to experience Filipino cuisine with friends, and the portions were generous. The warm hospitality made it an even more memorable evening.</p>
+            </div>
+        </div>
+        <!--BOX-4-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-4.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Oliva</strong>
+                        
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>I was blown away by the quality of the food and the overall experience at Azalan Kamayan. The mix of textures and flavors was perfect. A great spot for a family gathering or a fun dinner with friends!</p>
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+
     <footer>
         <div class="footer-container">
           <!-- Column 1: Locations -->
@@ -675,22 +862,43 @@
             navbar.classList.remove('scrolled');
         }
     });
-    // Function to change background image every 5 seconds
     let images = [
     'azalan bg.png',
+    'sfdfdf.jpg',
     '2d.jpg',
     'ac.jpg',
     'out.jpg'
-    ];
-    let currentIndex = 0;
+];
+let currentIndex = 0;
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
     
-    function changeBackground() {
-        currentIndex = (currentIndex + 1) % images.length;
-        document.getElementById('home').style.backgroundImage = `url('${images[currentIndex]}')`;
-    }
+    // Create a new div element for background fade
+    const fadeDiv = document.createElement('div');
+    fadeDiv.classList.add('background-fade');
+    fadeDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
     
-    // Change background every 5 seconds
-    setInterval(changeBackground, 5000);
+    // Append the fade div to the #home element
+    const homeElement = document.getElementById('home');
+    homeElement.appendChild(fadeDiv);
+    
+    // Trigger fade effect
+    setTimeout(() => {
+        fadeDiv.style.opacity = 1; // Make the new background fully visible
+    }, 100); // Small delay to ensure the background image is set before transitioning
+    
+    // Remove the old background after fade effect is completed
+    setTimeout(() => {
+        homeElement.removeChild(homeElement.querySelector('.background-fade:not([style*="opacity: 1"])'));
+    }, 1500); // After the fade is complete (1.5s)
+}
+
+// Change background every 5 seconds
+setInterval(changeBackground, 5000);
+
+// Initialize first background change
+changeBackground();
 
     //search bar 
     function toggleSearch() {
