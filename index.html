@@ -93,7 +93,7 @@
         .logo-text h1 {
             margin: 0;
             
-            color: rgb(229, 150, 3);
+            color: rgb(224, 147, 2);
             font-size: 1.4rem;
         }
 
@@ -106,7 +106,7 @@
 /* When scrolled, reposition the logo text back to the right side of the logo */
 .navbar.scrolled .logo-container {
     flex-direction: row; /* Keep logo and text in a row */
-margin-left: 3px;
+margin-left: 2px;
 transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
    
     justify-content:left; /* Center horizontally */
@@ -121,6 +121,7 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
     margin-left: -5px; /* Ensure logo text moves back to the right after scrolling */
 }
 .navbar.scrolled .logo-text h1 {
+   
     font-size: 1.5rem;margin-top: -3px;
     transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
     
@@ -292,7 +293,7 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #151313a9; /* Dark overlay for contrast */
+    background-color: #171a16bc; /* Dark overlay for contrast */
     z-index: 1;
 }
 #home .background-fade {
@@ -322,7 +323,7 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
             
     font-weight:300;
     margin-top: -20px;
-   margin-bottom: -100px;
+   margin-bottom: -150px;
     align-items: center;
      font-size: clamp(0.3rem, 2vw, 0.6rem);
  }
@@ -420,10 +421,11 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
                 margin-top: 5px; /* Add space between logo and text */
             }
             .logo-text h1 {
-              
+              color: rgb(221, 144, 0);
                 font-size: 1.8em;
             }
             .logo-text p {
+                color: #dfdfdf;
                 font-size: 0.7em}
 
             
@@ -432,11 +434,9 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
          /* Mobile Responsive */
          @media screen and (max-width: 1180px) {
             #home {
-                padding-top: 100px;  /* Increase space on smaller screens */
                 max-height:90vh;
-           }  #menu-icon {
-            display: block;
-        }
+                object-fit: contain;
+           }  
              .home-content h4{
                 width: 100%;
              } 
@@ -509,6 +509,10 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
         }
 
   @media screen and (max-width: 788px) {
+    #home {
+        max-height:80vh;
+        object-fit: contain;
+   } 
     .logo-container {
         
         display: flex;
@@ -518,8 +522,20 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
         width: 100%; /* Ensure it takes full width *//* Increase this value to lower the logo */   }
     .logo {
         width:60px;  /* Smaller logo size for small screens */
-        height: 60px;
-    }}
+        height: 60px;}
+        .logo-text {
+            font-size:larger;
+            text-align: center; /* Center-align the text */
+            margin-top: 5px; /* Add space between logo and text */
+        }
+        .logo-text h1 {
+          
+            font-size: 1.5em;
+        }
+        .logo-text p {
+            font-size: 0.6em}
+
+    }
 
     /* Scroll Up Button Styles */
 #scrollUpBtn {
