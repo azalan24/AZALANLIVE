@@ -83,8 +83,8 @@
         }
 
         .logo {
-            width: 50px;
-            height: 50px;
+            width: 53px;
+            height: 55px;
             margin-right: 10px;
         }
 
@@ -96,8 +96,8 @@
         }
 
         .logo-text p {
-            margin: -2px 0 0 0;
-            font-size: 9px;
+            margin: -5px 0 0 0;
+            font-size: 8.5px;
             color: white;
         }
 
@@ -305,7 +305,7 @@
 }
 
 .home-content h1 {
- 
+ margin-top: -30px;
     margin-bottom: 30px;  /* Space added below h1 */
     font-weight: bold;
     color: #fff;
@@ -339,7 +339,11 @@
               
                 width: 90%; /* Smaller container width */
             }
-        
+            #home {
+                background-size:auto;
+                background-repeat: no-repeat;
+            }
+            
             .search-bar {
              
               width: 87%; /* On small screens, take up 80% of the available width */
@@ -433,11 +437,12 @@
 
   @media screen and (max-width: 788px) {
     .logo-container {
-        margin: 5px; 
-        margin-left: -20px;
+        
         display: flex;
-         width: 100%; /* Ensure it takes full width *//* Increase this value to lower the logo */
-    }
+        margin-left: -50px;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: 100%; /* Ensure it takes full width *//* Increase this value to lower the logo */   }
     .logo {
         width: 50px;  /* Smaller logo size for small screens */
         height: 50px;
