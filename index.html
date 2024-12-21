@@ -80,6 +80,8 @@
             display: flex;
             align-items: center;
             padding-left: 30px;
+            transition: all 0.3s ease; /* Smooth transition for flex-direction and margins */
+
         }
 
         .logo {
@@ -101,6 +103,28 @@
             color: white;
         }
 
+/* When scrolled, reposition the logo text back to the right side of the logo */
+.navbar.scrolled .logo-container {
+    flex-direction: row; /* Keep logo and text in a row */
+}
+
+.navbar.scrolled .logo-text {
+    margin-top: 0;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+    margin-left: -5px; /* Ensure logo text moves back to the right after scrolling */
+}
+.navbar.scrolled .logo-text h1 {
+    font-size: 1.5rem;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+    
+}
+.navbar.scrolled .logo-text p {
+    font-size: 8.8px;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+    
+}
+
+ 
         /* Center the nav menu */
         .nav-links {
             flex-grow: 1;
@@ -214,9 +238,10 @@
     background-color: orange; /* Keep the same color when hovered */
     color: white; /* Keep the same text color */
 }
+
  /* Hamburger and X Icons */
  #menu-icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
             padding-left: 20px; /* Adjust padding if needed */
             cursor: pointer;
             color: white;
@@ -339,10 +364,7 @@
               
                 width: 90%; /* Smaller container width */
             }
-            #home {
-                background-size:auto;
-                background-repeat: no-repeat;
-            }
+          
             
             .search-bar {
              
@@ -357,6 +379,34 @@
             .view-menu-btn{
                 margin-top: 20px;
             }
+            .logo-container {
+                display: flex;
+                margin-left: -60px;
+                flex-direction: column; /* Stack logo and text vertically */
+                justify-content: center;
+                align-items: center; /* Center both vertically and horizontally */
+                width: 100%;
+            }
+        
+            .logo {
+                width: 60px; /* Adjust logo size for small screens */
+                height: 60px;
+            }
+        
+            .logo-text {
+                font-size:larger;
+                text-align: center; /* Center-align the text */
+                margin-top: 5px; /* Add space between logo and text */
+            }
+            .logo-text h1 {
+              
+                font-size: 1.8em;
+            }
+            .logo-text p {
+                font-size: 0.7em}
+
+            
+            
         }
          /* Mobile Responsive */
          @media screen and (max-width: 1180px) {
@@ -386,7 +436,7 @@
                 transform: translateX(-100%); /* Initially hidden */
                 transition: transform 0.5s ease-in-out; /* Smooth slide-in and slide-out */
             }  #menu-icon {
-                margin: 5px; /* Increase this value to lower the icon */
+                margin: 10px; /* Increase this value to lower the icon */
             }
             .nav-links ul li a:hover{
                 color: #faa11c;
@@ -439,13 +489,13 @@
     .logo-container {
         
         display: flex;
-        margin-left: -50px;
+        
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         width: 100%; /* Ensure it takes full width *//* Increase this value to lower the logo */   }
     .logo {
-        width: 50px;  /* Smaller logo size for small screens */
-        height: 50px;
+        width:60px;  /* Smaller logo size for small screens */
+        height: 60px;
     }}
 
     /* Scroll Up Button Styles */
